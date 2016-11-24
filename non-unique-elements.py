@@ -14,8 +14,10 @@ How it is used: This mission will help you to understand how
 to manipulate arrays, something that is the basis for solving 
 more complex tasks. The concept can be easily generalized for 
 real world tasks. 
+
 For example: if you need to clarify statistics by removing 
 low frequency elements (noise).
+
 Precondition:
 0 < len(data) < 1000
 '''
