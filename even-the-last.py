@@ -26,12 +26,15 @@ all(isinstance(x, int) for x in
 array) all(-100 < x < 100 for x in array)
 '''
 from functools import reduce
-def checkio(array):
+def checkio_my_sln(array):
 	try:
 		s = reduce(lambda x,y: x+y, [v for n,v in enumerate(array) if n%2 == 0])
 		return s*array[-1]
 	except:
 		return 0
+
+def checkio_online_sln(array):
+    return sum(el for el in array[::2]) * array[-1] if array else 0
 
 inputs = [
 	[0, 1, 2, 3, 4, 5],
@@ -41,4 +44,5 @@ inputs = [
 ]
 
 for inp in inputs:
-	print(checkio(inp))
+	print(checkio_my_sln(inp))
+	print(checkio_online_sln(inp))
