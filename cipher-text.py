@@ -53,7 +53,6 @@ def recall_password_my_sln(cipher_grille, ciphered_password):
 		for grille, phrase in zip(cipher_grille, ciphered_password):
 			passwd.extend([phrase[pos] for pos, char in enumerate(grille) if char == 'X'])
 		cipher_grille = rotate_grille(cipher_grille)
-
 	return ''.join(passwd)
 
 def recall_password_online_sln(grill, cypher):
