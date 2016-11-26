@@ -33,7 +33,7 @@ all(ch in string.printable for ch in text)
 '''
 import re
 def find_message(text):
-	return ''.join(re.findall('[A-Z]+', text))
+	return ''.join(re.findall(r'[A-Z]+', text))
 
 
 inputs = [
