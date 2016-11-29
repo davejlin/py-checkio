@@ -49,5 +49,5 @@ inputs = [
 	("enough", "jokes")
 ]
 
-outputs = map(lambda x: left_join(x), inputs)
+outputs = map(left_join, inputs)
 print(list(outputs))

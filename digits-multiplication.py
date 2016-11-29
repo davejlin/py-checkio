@@ -36,5 +36,5 @@ inputs = [
 	1
 ]
 
-outputs = map(lambda x: checkio(x), inputs)
+outputs = map(checkio, inputs)
 print(list(outputs))

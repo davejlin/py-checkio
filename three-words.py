@@ -37,5 +37,5 @@ inputs = [
 	"one two 2.5 three four 4.5 five six seven eight"
 ]
 
-for inp in inputs:
-	print(checkio(inp))
+outputs = map(checkio, inputs)
+print(list(outputs))
