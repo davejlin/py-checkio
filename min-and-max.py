@@ -53,11 +53,11 @@ def comp(args, kwargs, comp_fn):
 	if len(args) == 1:
 		args = [arg for arg in args[0]]
 	f = kwargs.get("key", lambda x: x)
-	_mf, _m = f(args[0]), args[0]
+	m, mf = args[0], f(args[0])
 	for arg in args:
-		if comp_fn(f(arg), _mf):
-			_mf, _m = f(arg), arg
-	return _m
+		if comp_fn(f(arg), mf):
+			m, mf = arg, f(arg)
+	return m
 
 def max(*args, **kwargs):
 	return comp(args, kwargs, lambda x,y: x > y)
