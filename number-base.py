@@ -41,9 +41,9 @@ MAP = {
 }
 
 def checkio(str_number, radix):
-	digits = list(map(lambda x: MAP[x], list(str_number)))
+	digits = list(map(lambda x: MAP[x], list(str_number[::-1])))
 	if max(digits) >= radix: return -1
-	return sum([digit*radix**i for i, digit in enumerate(reversed(digits))])
+	return sum([digit*radix**i for i, digit in enumerate(digits)])
 
 def checkio_online_sln(str_number, radix):
     try:
