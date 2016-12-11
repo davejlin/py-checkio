@@ -29,15 +29,13 @@ Precondition:
 import unittest
 import math
 
-def find_degrees(sides):
+def find_angle(sides):
 	x = (sides[0]**2 + sides[1]**2 - sides[2]**2) / (2*sides[0]*sides[1])
-	try:
-		return round(math.degrees(math.acos(x)))
-	except:
-		return 0
+	try: return round(math.degrees(math.acos(x)))
+	except: return 0
 
 def checkio(a, b, c):
-	angles = list(map(find_degrees, [(a, b, c), (a, c, b), (b, c, a)]))
+	angles = list(map(find_angle, [(a, b, c), (a, c, b), (b, c, a)]))
 	return sorted(angles) if 0 not in angles else [0,0,0]
 
 
