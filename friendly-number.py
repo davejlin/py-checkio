@@ -88,7 +88,7 @@ def friendly_number(number, base=1000, decimals=0, suffix='', powers=['', 'k', '
 
 class Test(unittest.TestCase):
 	def test_cases(self):
-		#assert friendly_number(0) == '0'
+		assert friendly_number(0) == '0'
 		assert friendly_number(102) == '102'
 		assert friendly_number(10240) == '10k'
 		assert friendly_number(12341234, decimals=1) == '12.3M'
